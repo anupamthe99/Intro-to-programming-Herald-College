@@ -35,8 +35,12 @@ def update_item():
 
 def display_items():
     print("Display all items")
-    print(product)
-    
+    # print(product)
+    print(product.items())
+    print()
+    for code,p in product.items():
+        print(f"{code}Number ,Name: {p['name']}, Quantity:{p['quantity']} Price: {p['price']}")
+
 while True:
     print("Welcome to the Inventory Management System")
     print("1. Add an item")
